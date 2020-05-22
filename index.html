@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Nuevo Vuejs</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <table class=" table table-hover" id="app">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Rut</th>
+                <th scope="col">Nacimiento</th>
+                <th scope="col">Edad</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{usuarios[0].nombre}}</td>
+                <td>{{usuarios[0].apellido}}</td>
+                <td>{{usuarios[0].run}}</td>
+                <td>{{usuarios[0].Nacimiento}}</td>
+                <td>{{usuarios[0].edad}}</td>
+
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td scope="row">2</td>
+                <td>{{usuarios[1].nombre}}</td>
+                <td>{{usuarios[1].apellido}}</td>
+                <td>{{usuarios[1].run}}</td>
+                <td>{{usuarios[1].Nacimiento}}</td>
+                <td>{{usuarios[1].edad}}</td>
+
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td scope="row">3</td>
+                <td>{{usuarios[2].nombre}}</td>
+                <td>{{usuarios[2].apellido}}</td>
+                <td>{{usuarios[2].run}}</td>
+                <td>{{usuarios[2].Nacimiento}}</td>
+                <td>{{usuarios[2].edad}}</td>
+
+            </tr>
+        </tbody>
+
+    </table>
+
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                usuarios: [{
+                    nombre: 'Nicolas',
+                    apellido: 'Mejias',
+                    run: '12666678-9',
+                    Nacimiento: '2-1-1960',
+                    edad: '60',
+                }, {
+                    nombre: 'Luis',
+                    apellido: 'Lizama',
+                    run: '12345678-9',
+                    Nacimiento: '21-12-1967',
+                    edad: '57',
+                }, {
+                    nombre: 'Javier',
+                    apellido: 'Acevedo',
+                    run: '19551049-0',
+                    Nacimiento: '19-05-1997',
+                    edad: '23',
+                }]
+            }
+
+        })
+    </script>
+</body>
+
+</html>
